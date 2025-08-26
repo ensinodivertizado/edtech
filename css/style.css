@@ -1,0 +1,46 @@
+/* Estilo principal do site Ensino Divertizado */
+body {
+  margin: 0;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background: #f0faff;
+  color: #333;
+}
+
+/* Navbar fixa */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #0077b6;
+  padding: 15px;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+main {
+  padding: 100px 20px 20px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar a {
+    margin: 10px 0;
+  }
+}
