@@ -1,3 +1,1 @@
-document.addEventListener("DOMContentLoaded", () => {
-  console.log("Site Ensino Divertizado carregado com sucesso!");
-});
+console.log('Site Ensino Divertizado v3 pronto!');
