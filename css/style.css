@@ -1,106 +1,26 @@
-/* Reset simples */
-* { box-sizing: border-box; }
-html, body { margin:0; padding:0; }
 body {
+  margin: 0;
   font-family: Arial, sans-serif;
-  color:#222;
-  background:#f6f8fb;
+  background: #f9f9f9;
+  color: #333;
 }
-
-/* Navbar fixa no topo */
-nav {
-  position: sticky;   /* gruda no topo mas respeita fluxo */
+.navbar {
+  display: flex;
+  justify-content: center;
+  background: #4CAF50;
+  position: sticky;
   top: 0;
   z-index: 1000;
-  background: #077bb6;
-  color: #fff;
-  border-bottom: 3px solid rgba(255,255,255,.15);
 }
-
-.navbar {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 14px 16px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-}
-
-.brand {
-  font-weight: 700;
-  letter-spacing: .2px;
-}
-
-.navlinks {
-  list-style: none;
-  display: flex;
-  gap: 18px;
-  margin: 0;
-  padding: 0;
-}
-
-.navlinks a {
-  color: #fff;
+.navbar a {
+  color: white;
+  padding: 14px 20px;
   text-decoration: none;
-  padding: 8px 10px;
-  border-radius: 8px;
-  transition: background .2s ease;
 }
-.navlinks a:hover, .navlinks a.active { background: rgba(255,255,255,.15); }
-
-/* “Container” para o conteúdo das páginas */
-.container {
-  max-width: 1100px;
-  margin: 24px auto;
-  padding: 0 16px;
+.navbar a:hover {
+  background: #45a049;
 }
-
-/* Heros/Seções */
-.hero {
-  background: linear-gradient(180deg, #0a88c8 0%, #0c6a9e 100%);
-  color: #fff;
-  border-radius: 16px;
-  padding: 36px 24px;
-  margin-top: 18px;
+main {
+  padding: 20px;
+  text-align: center;
 }
-.hero h1 { margin: 0 0 8px; font-size: 28px; }
-.hero p  { margin: 0; opacity: .95; }
-
-/* Cartões/grades */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-  margin: 24px 0;
-}
-.card {
-  background: #fff;
-  border-radius: 14px;
-  padding: 18px;
-  box-shadow: 0 6px 18px rgba(2, 24, 55, .08);
-  border: 1px solid #e9eef5;
-}
-.card h3 { margin-top: 0; }
-
-/* Rodapé */
-footer {
-  margin-top: 40px;
-  background: #0b4462;
-  color: #cfe6f5;
-  padding: 24px 16px;
-}
-footer .container { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
-footer a { color: #fff; text-decoration: none; }
-footer a:hover { text-decoration: underline; }
-
-/* Responsividade */
-@media (max-width: 900px) {
-  .navlinks { gap: 12px; flex-wrap: wrap; }
-  .grid { grid-template-columns: 1fr 1fr; }
-}
-@media (max-width: 600px) {
-  .navbar { flex-direction: column; align-items: flex-start; gap: 8px; }
-  .grid { grid-template-columns: 1fr; }
-}
-
